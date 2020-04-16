@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    container_name: app-backend
+    command: npm start
+    ports:
+      - "3030:3000"
+    volumes:
+      - .:/usr/app
+      - /usr/app/node_modules
